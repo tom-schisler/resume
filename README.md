@@ -1,3 +1,3 @@
 # site
 my site
-https://tom-schisler.github.io
+https://tom-schisler.github.io/site
