@@ -1,3 +1,3 @@
 jQuery(function($) {
-  console.log("nothing to see here");
+  console.log("Move along there's nothing to see here!");
 });
