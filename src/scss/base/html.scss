@@ -1,0 +1,117 @@
+%headers {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+h1 {
+  @extend %headers;
+  font-family: $font-serif;
+  margin-bottom: 20px;
+}
+h2 {
+  @extend %headers;
+  font-family: $font-serif;
+  margin-bottom: 10px;
+}
+h3 {
+  @extend %headers;
+  font-family: $font-sans;
+  color: $s1;
+  margin-bottom: 10px;
+}
+h4 {
+  @extend %headers;
+  font-family: $font-sans;
+  color: $s1;
+  margin-bottom: 10px;
+}
+h5 {
+  @extend %headers;
+  margin-bottom: 5px;
+}
+h6 {
+  @extend %headers;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 0 0 15px 0;
+  padding: 0;
+  &.lead {
+  font-weight: 600;
+    font-size: 110%;
+    color: $s2;
+  }
+  &.small {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 85%;
+    color: $s2;
+  }
+}
+
+ul {
+  li {}
+}
+
+ol {
+  li {}
+}
+
+dl {
+  dt {}
+  dd {}
+}
+
+blockquote {
+  p {}
+  cite {}
+}
+
+table {
+  caption {}
+  thead {
+    tr {
+      th {}
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {}
+      &:nth-child(even) {}
+      td {}
+    }
+  }
+}
+
+a {
+  &:hover,
+  &:focus {}
+}
+
+button {
+  display: inline-block;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: rgba(0, 0, 0, 0.80);
+  border: none rgba(0, 0, 0, 0);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+  &:hover {}
+  &:active {}
+  &:focus {}
+}
+
+
+::selection {
+	background-color: rgba($m1, 0.75);
+}

@@ -28,16 +28,6 @@ var source = {
 	images: 'src/images/*'
 };
 
-function prettyhtml() {
-	return src(source.templates)
-		.pipe(htmlbeautify({
-			"indent_size": 1,
-			"indent_char": "	",
-			"preserve_newlines": false
-		}))
-		.pipe(dest('./'));
-}
-
 function compileSass() {
 	return src(packageJSON.css)
 		.pipe(sassGlob())

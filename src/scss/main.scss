@@ -3,4 +3,8 @@
 // =============================================================================
 
 @import "../../node_modules/normalize.css/normalize";
-@import "base/layout.scss";
+
+@import
+  "base/variables.scss",
+  "base/layout.scss",
+  "base/html.scss";

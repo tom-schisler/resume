@@ -1,7 +1,72 @@
-html {
-
+// =======================
+// general styles
+// =======================
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; // all webkit
+  -moz-osx-font-smoothing: grayscale; // firefox
+  font-feature-settings: 'liga'; // ie
 }
 
-  body {
-    border: 5px solid red;
+html {
+  margin: 0;
+  padding: 0;
+  background: $sf;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  font-family: $font-sans;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $s1;
+  @media (min-width: $bp-large) {
+    display: flex;
+    flex-flow: row wrap;
   }
+}
+
+header {
+  margin: 0;
+  padding: 10px 20px;
+  @media (min-width: $bp-large) {
+    flex: 1 0 100%;
+  }
+  .lead {
+    @media (min-width: $bp-large) {
+      max-width: 80%;
+    }
+  }
+}
+
+footer {
+  margin: 0;
+  padding: 10px 20px;
+  @media (min-width: $bp-large) {
+    flex: 1 0 100%;
+  }
+}
+
+
+main {
+  margin: 0;
+  padding: 10px 20px;
+  @media (min-width: $bp-large) {
+    flex: 0 1 65%;
+  }
+}
+
+aside {
+  margin: 0;
+  padding: 10px 20px;
+  @media (min-width: $bp-large) {
+    flex: 0 1 35%;
+  }
+}
+
+  section {}
