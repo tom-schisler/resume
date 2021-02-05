@@ -51,11 +51,22 @@ p {
 }
 
 ul {
-  li {}
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+  li {
+    margin: 2.5px 0;
+    padding: 0;
+  }
 }
 
 ol {
-  li {}
+  margin: 0; 
+  padding: 0;
+  li {
+    margin: 2.5px 0;
+    padding: 0;
+  }
 }
 
 dl {
@@ -68,26 +79,26 @@ dl {
   }
 }
 
-blockquote {
-  p {}
-  cite {}
-}
+// blockquote {
+//   p {}
+//   cite {}
+// }
 
-table {
-  caption {}
-  thead {
-    tr {
-      th {}
-    }
-  }
-  tbody {
-    tr {
-      &:nth-child(odd) {}
-      &:nth-child(even) {}
-      td {}
-    }
-  }
-}
+// table {
+//   caption {}
+//   thead {
+//     tr {
+//       th {}
+//     }
+//   }
+//   tbody {
+//     tr {
+//       &:nth-child(odd) {}
+//       &:nth-child(even) {}
+//       td {}
+//     }
+//   }
+// }
 
 a {
   color: $m1;
@@ -115,9 +126,9 @@ button {
   background-color: #E6E6E6;
   text-decoration: none;
   border-radius: 2px;
-  &:hover {}
-  &:active {}
-  &:focus {}
+  // &:hover {}
+  // &:active {}
+  // &:focus {}
 }
 
 
