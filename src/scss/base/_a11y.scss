@@ -1,0 +1,16 @@
+.skip-to-content a {
+    margin: 0; 
+    padding: $font-size/2;
+    position: absolute;
+    top: 0;
+    background-color: rgba($s1,0.8);
+    transform: translate(0,-100%);
+    transition: all 0.5s;
+    color: $sf;
+    &:focus {
+        transform: translate(0,0);
+    }
+    &:hover {
+        background-color: rgba($s1,1);
+    }
+}

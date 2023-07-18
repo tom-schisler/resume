@@ -535,13 +535,11 @@ h2 {
 
 h3 {
   font-family: "Open Sans", sans-serif;
-  color: #282828;
   margin-bottom: 10px;
 }
 
 h4 {
   font-family: "Open Sans", sans-serif;
-  color: #282828;
   margin-bottom: 10px;
 }
 
@@ -554,7 +552,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 15px 0;
+  margin: 0 0 1rem 0;
   padding: 0;
 }
 p.lead {
@@ -562,10 +560,9 @@ p.lead {
   font-size: 110%;
   color: #505050;
 }
-p.small {
+p small {
   margin-bottom: 5px;
   font-weight: 600;
-  font-size: 90%;
   color: #505050;
 }
 
@@ -628,4 +625,23 @@ button {
 ::selection {
   background-color: rgba(0, 56, 129, 0.75);
   color: #fff;
+}
+
+.skip-to-content a {
+  margin: 0;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  background-color: rgba(40, 40, 40, 0.8);
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  transition: all 0.5s;
+  color: #fff;
+}
+.skip-to-content a:focus {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.skip-to-content a:hover {
+  background-color: #282828;
 }
