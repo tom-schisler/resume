@@ -1,3 +1,8 @@
+::selection {
+	background-color: rgba($m2, 0.75);
+  color: $sf;
+}
+
 %headers {
   margin: 0;
   padding: 0;
@@ -6,44 +11,38 @@
 h1 {
   @extend %headers;
   font-family: $font-serif;
-  margin-bottom: 20px;
 }
 h2 {
   @extend %headers;
+  margin-block-end: 10px;
   font-family: $font-serif;
-  margin-bottom: 10px;
 }
 h3 {
   @extend %headers;
   font-family: $font-sans;
-  margin-bottom: 10px;
 }
 h4 {
   @extend %headers;
   font-family: $font-sans;
-  margin-bottom: 10px;
 }
 h5 {
   @extend %headers;
-  margin-bottom: 5px;
 }
 h6 {
   @extend %headers;
-  margin-bottom: 5px;
 }
 
 p {
   margin: 0 0 $font-size 0;
   padding: 0;
-  &.lead {
-  font-weight: 600;
-    font-size: 110%;
-    color: $s2;
+
+  &:has(small) {
+    margin-block-end: 5px;
   }
+
   small {
-    margin-bottom: 5px;
     font-weight: 600;
-    color: $s2;
+    color: $s1;
   }
 }
 
@@ -76,27 +75,6 @@ dl {
   }
 }
 
-// blockquote {
-//   p {}
-//   cite {}
-// }
-
-// table {
-//   caption {}
-//   thead {
-//     tr {
-//       th {}
-//     }
-//   }
-//   tbody {
-//     tr {
-//       &:nth-child(odd) {}
-//       &:nth-child(even) {}
-//       td {}
-//     }
-//   }
-// }
-
 a {
   color: $m1;
   transition: all 0.25s;
@@ -123,13 +101,7 @@ button {
   background-color: #E6E6E6;
   text-decoration: none;
   border-radius: 2px;
-  // &:hover {}
-  // &:active {}
-  // &:focus {}
 }
 
 
-::selection {
-	background-color: rgba($m2, 0.75);
-  color: $sf;
-}
+
