@@ -465,6 +465,7 @@ nav {
   }
 }
 nav ul {
+  list-style: none;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -485,14 +486,14 @@ main {
 }
 @media (min-width: 800px) {
   main {
-    flex: 0 1 70%;
+    flex: 0 1 65%;
     -webkit-padding-end: 20px;
             padding-inline-end: 20px;
   }
 }
 @media print {
   main {
-    width: 70%;
+    width: 65%;
     display: inline-block;
     float: left;
     -webkit-padding-end: 20px;
@@ -506,7 +507,7 @@ aside {
 }
 @media (min-width: 800px) {
   aside {
-    flex: 0 1 30%;
+    flex: 0 1 35%;
     font-size: 95%;
     -webkit-padding-start: 20px;
             padding-inline-start: 20px;
@@ -514,7 +515,7 @@ aside {
 }
 @media print {
   aside {
-    width: 30%;
+    width: 35%;
     display: inline-block;
     float: left;
     -webkit-padding-start: 20px;
@@ -528,7 +529,7 @@ section {
 }
 
 ::selection {
-  background-color: rgba(0, 56, 129, 0.75);
+  background-color: rgba(0, 32, 128, 0.75);
   color: #fff;
 }
 
@@ -569,14 +570,21 @@ p small {
   color: #282828;
 }
 
+strong, em {
+  color: #505050;
+}
+
 ul {
-  list-style: none;
+  margin: 0 0.5rem 0 1rem;
+  padding: 0;
+  list-style: circle;
+}
+ul li {
   margin: 0;
   padding: 0;
 }
-ul li {
-  margin: 2.5px 0;
-  padding: 0;
+ul li::marker {
+  color: hsl(225, 100%, 25%);
 }
 
 ol {
@@ -597,11 +605,11 @@ dl dd {
 }
 
 a {
-  color: #814900;
+  color: hsl(25, 100%, 25%);
   transition: all 0.25s;
 }
 a:hover, a:focus {
-  color: #003881;
+  color: hsl(225, 100%, 25%);
 }
 
 button {

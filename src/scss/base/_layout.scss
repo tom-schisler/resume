@@ -129,6 +129,7 @@ nav {
     display: none;
   }
   ul {
+    list-style: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -148,11 +149,11 @@ main {
   margin: 0;
   padding: 10px 0;
   @media (min-width: $bp-large) {
-    flex: 0 1 70%;
+    flex: 0 1 65%;
     padding-inline-end: 20px;
   }
   @media print {
-    width: 70%;
+    width: 65%;
     display: inline-block;
     float: left;
     padding-inline-end: 20px;
@@ -163,12 +164,12 @@ aside {
   margin: 0;
   padding: 10px 0;
   @media (min-width: $bp-large) {
-    flex: 0 1 30%;
+    flex: 0 1 35%;
     font-size: 95%;
     padding-inline-start: 20px;
   }
   @media print {
-    width: 30%;
+    width: 35%;
     display: inline-block;
     float: left;
     padding-inline-start: 20px;
