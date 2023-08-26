@@ -482,45 +482,12 @@ nav a {
 
 main {
   margin: 0;
-  padding: 10px 0;
-}
-@media (min-width: 800px) {
-  main {
-    flex: 0 1 65%;
-    -webkit-padding-end: 20px;
-            padding-inline-end: 20px;
-  }
-}
-@media print {
-  main {
-    width: 65%;
-    display: inline-block;
-    float: left;
-    -webkit-padding-end: 20px;
-            padding-inline-end: 20px;
-  }
+  padding: 0;
 }
 
 aside {
   margin: 0;
-  padding: 10px 0;
-}
-@media (min-width: 800px) {
-  aside {
-    flex: 0 1 35%;
-    font-size: 95%;
-    -webkit-padding-start: 20px;
-            padding-inline-start: 20px;
-  }
-}
-@media print {
-  aside {
-    width: 35%;
-    display: inline-block;
-    float: left;
-    -webkit-padding-start: 20px;
-            padding-inline-start: 20px;
-  }
+  padding: 0;
 }
 
 section {
@@ -551,6 +518,7 @@ h2 {
 
 h3 {
   font-family: "Open Sans", sans-serif;
+  color: #282828;
 }
 
 h4 {
@@ -566,16 +534,19 @@ p:has(small) {
           margin-block-end: 5px;
 }
 p small {
-  font-weight: 600;
   color: #282828;
+  font-size: medium;
 }
-
-strong, em {
-  color: #505050;
+p small strong {
+  font-weight: 600;
+}
+p small em {
+  font-style: normal;
+  font-weight: 300;
 }
 
 ul {
-  margin: 0 0.5rem 0 1rem;
+  margin: 0 0.5rem 1rem 1rem;
   padding: 0;
   list-style: circle;
 }
@@ -585,6 +556,13 @@ ul li {
 }
 ul li::marker {
   color: hsl(225, 100%, 25%);
+}
+ul li strong {
+  font-weight: 600;
+}
+ul li em {
+  font-style: normal;
+  font-weight: 300;
 }
 
 ol {
