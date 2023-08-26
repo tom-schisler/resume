@@ -2,9 +2,8 @@
 // Imports
 // =============================================================================
 
-@import "../../node_modules/normalize.css";
-
 @import
+  "vendor/_normalize.scss",
   "base/_variables.scss",
   "base/_layout.scss",
   "base/_html.scss",
