@@ -3,8 +3,10 @@
 // =============================================================================
 
 @import
-  "vendor/_normalize.scss",
-  "base/_variables.scss",
-  "base/_layout.scss",
-  "base/_html.scss",
-  "base/_a11y.scss";
+  "vendor/_normalize",
+  "vendor/typography",
+  "base/_variables",
+  "base/navigation",
+  "base/_layout",
+  "base/_html",
+  "base/_a11y";
