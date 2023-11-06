@@ -1,11 +1,11 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v8.0.1&nbsp;|&nbsp;MIT License&nbsp;|&nbsp;github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("//fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -376,7 +376,7 @@ body {
   position: relative;
   margin: 0 auto;
   padding: 10px 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #282828;
@@ -513,26 +513,32 @@ section {
 h6, h5, h4, h3, h2, h1 {
   margin: 0;
   padding: 0;
-  font-weight: 600;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 h1 {
-  font-family: "Bree Serif", serif;
+  font-weight: 900;
 }
 
 h2 {
   -webkit-margin-after: 10px;
           margin-block-end: 10px;
-  font-family: "Bree Serif", serif;
+  font-weight: 700;
 }
 
 h3 {
-  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   color: #282828;
+  display: flex;
+  justify-content: space-between;
+}
+h3 > span {
+  flex: 1 1 auto;
+  text-align: right;
 }
 
 h4 {
-  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 
 p {
