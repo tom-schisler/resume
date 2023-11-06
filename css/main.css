@@ -539,6 +539,8 @@ h3 > span {
 
 h4 {
   font-weight: 600;
+  -webkit-margin-after: 0.75rem;
+          margin-block-end: 0.75rem;
 }
 
 p {
@@ -559,6 +561,11 @@ p small strong {
 p small em {
   font-style: normal;
   font-weight: 300;
+}
+
+section.job-scope > p, section.sample-work > p {
+  -webkit-margin-after: 0.25rem;
+          margin-block-end: 0.25rem;
 }
 
 ul {
@@ -604,6 +611,11 @@ a {
 }
 a:hover, a:focus {
   color: hsl(225, 100%, 25%);
+}
+@media print {
+  a.screen-only {
+    display: none;
+  }
 }
 
 button {
