@@ -527,14 +527,18 @@ h2 {
 }
 
 h3 {
-  font-weight: 600;
+  font-weight: 400;
   color: #282828;
-  display: flex;
-  justify-content: space-between;
 }
-h3 > span {
-  flex: 1 1 auto;
-  text-align: right;
+@media (min-width: 600px) {
+  h3 {
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 > span {
+    flex: 1 1 auto;
+    text-align: right;
+  }
 }
 
 h4 {
@@ -569,7 +573,7 @@ section.job-scope > p, section.sample-work > p {
 }
 
 ul {
-  margin: 0 0.5rem 1rem 1rem;
+  margin: 0 0.5rem 1rem 1.75rem;
   padding: 0;
   list-style: circle;
 }

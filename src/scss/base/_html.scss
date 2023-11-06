@@ -19,13 +19,16 @@ h2 {
 }
 h3 {
   @extend %headers;
-  font-weight: 600;
+  font-weight: 400;
   color: $s1;
-  display: flex;
-  justify-content: space-between;
-  > span {
-    flex: 1 1 auto;
-    text-align: right;
+
+  @media (min-width: $bp-medium) {
+    display: flex;
+    justify-content: space-between;
+    > span {
+      flex: 1 1 auto;
+      text-align: right;
+    }
   }
 }
 h4 {
@@ -75,7 +78,7 @@ strong, em {
 }
 
 ul {
-  margin: 0 0.5rem 1rem 1rem; 
+  margin: 0 0.5rem 1rem 1.75rem; 
   padding: 0;
   list-style: circle;
   li {
