@@ -310,8 +310,10 @@ template {
 }
 
 nav {
-  margin: 0 0 5px 0;
-  padding: 5px 0 10px;
+  margin: 0 0 0.25rem 0;
+  padding: 0.25em 0 0.5rem;
+}
+nav.main {
   box-shadow: inset 0 -1px 0 #D3D3D3;
 }
 @media (min-width: 800px) {
@@ -332,7 +334,12 @@ nav ul {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+}
+@media (min-width: 800px) {
+  nav ul {
+    gap: 1rem;
+  }
 }
 nav ul > li {
   margin: 0;
@@ -342,7 +349,7 @@ nav ul > li.current {
   font-weight: 600;
 }
 nav a {
-  padding: 2.5px 5px;
+  padding: 0.25rem 0.5rem;
   margin: 0;
   text-decoration: none;
 }
@@ -395,13 +402,16 @@ body {
 
 header {
   width: 100%;
-  margin: 0 0 5px 0;
-  padding: 10px 0;
+  margin: 0 0 0.5rem 0;
+  padding: 1rem 0;
   box-shadow: inset 0 -1px 0 #D3D3D3;
 }
 @media (min-width: 800px) {
   header {
     flex: 1 0 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 @media print {
@@ -622,25 +632,25 @@ a:hover, a:focus {
   }
 }
 
-button {
+button,
+.button {
   display: inline-block;
-  line-height: normal;
-  white-space: nowrap;
-  vertical-align: middle;
+  line-height: 1.2;
   text-align: center;
   cursor: pointer;
-  -webkit-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 100%;
-  padding: 0.5em 1em;
-  color: rgba(0, 0, 0, 0.8);
-  border: none rgba(0, 0, 0, 0);
-  background-color: #E6E6E6;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  background-color: hsl(25, 100%, 25%);
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease;
+}
+button:hover, button:focus,
+.button:hover,
+.button:focus {
+  color: #fff;
+  background-color: hsl(225, 100%, 25%);
+  text-decoration: none;
 }
 
 .skip-to-content a {
