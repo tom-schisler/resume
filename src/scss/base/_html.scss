@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
   font-family: $font-sans;
+  > strong {
+    font-weight: bolder;
+  }
 }
 h1 {
   @extend %headers;
@@ -22,12 +25,22 @@ h3 {
   font-weight: 400;
   color: $s1;
 
+  > span {
+    &:before {
+      content:"| ";
+    }
+  }
+
+
   @media (min-width: $bp-medium) {
     display: flex;
     justify-content: space-between;
     > span {
       flex: 1 1 auto;
       text-align: right;
+      &:before {
+        content:'';
+      }
     }
   }
 }
@@ -55,7 +68,7 @@ p {
     color: $s1;
     font-size: medium;
     strong {
-      font-weight: 600;
+      font-weight: bolder;
     }
     em {
       font-style: normal;
@@ -89,7 +102,7 @@ ul {
     }
 
     strong {
-      font-weight: 600;
+      font-weight: bolder;
     }
     em {
       font-style: normal;
