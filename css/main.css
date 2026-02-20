@@ -516,7 +516,7 @@ section {
 }
 
 ::selection {
-  background-color: rgba(0, 32, 128, 0.75);
+  background-color: rgba(0, 31.875, 127.5, 0.75);
   color: #fff;
 }
 
@@ -662,6 +662,34 @@ button:hover, button:focus,
   text-decoration: none;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background: hsl(225, 100%, 25%);
+  -webkit-animation: grow-progress linear;
+          animation: grow-progress linear;
+  animation-timeline: scroll();
+}
+
+@-webkit-keyframes grow-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes grow-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 .skip-to-content a {
   margin: 0;
   padding: 0.5rem;
