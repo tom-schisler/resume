@@ -1,3 +1,4 @@
+// progress bar
 .progress-bar {
   position: fixed;
   top: 0;
@@ -16,3 +17,171 @@
     width: 100%;
   }
 }
+
+// carousel 
+.carousel {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    anchor-name: --carousel;
+    scroll-marker-group: after;
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+    &::scroll-marker-group {
+      margin: 0 0 2rem 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0 0.25rem;
+      padding: 0.5rem 0;
+    }
+
+    > li {
+      scroll-snap-align: center;
+
+      &::scroll-marker {
+        content: "\25CE";
+        color: $m1;
+        font-size: 1.2rem;
+        line-height: 1;
+        aspect-ratio: 1 / 1;
+        text-decoration: none;
+        transition: all 0.25s;
+        &:hover {
+          content: "\25C9";
+        }
+        &:target-current {
+          content: "\25C9";
+          color: $m2;
+        }
+        
+      }
+    }
+
+    &::scroll-button(*) {
+      position: fixed;
+      position-anchor: --carousel;
+      margin: 0;
+      inset: -1rem;
+      font: inherit;
+      background: $m2;
+      color: $sf;
+      border: 0;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: all 0.25s;
+      &:hover {
+        background: $m1;
+      }
+      &:disabled {
+        opacity: 0;
+        background: $m2;
+        cursor: unset;
+      }
+    }
+
+    &::scroll-button(right) {
+      content: "\2192";
+      position-area: center right;
+    }
+
+    &::scroll-button(left) {
+      content: "\2190";
+      position-area: center left;
+    }
+  }
+
+  dialog {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 2px solid $m2;
+    border-radius: 0.25rem;
+    button {
+      all: unset;
+      border-radius: 0.25rem;
+      margin: 0 0 1rem 0;
+      padding: 0.25rem 0.5rem;
+      background: $m2;
+      color: $sf;
+      cursor: pointer;
+      &:hover, 
+      &:active {
+        background: $m1;
+      }
+    }
+    &::backdrop {
+      background-color: $m2;
+      opacity: 0.75;
+    }
+    figure {
+      margin: 0; 
+      padding: 0; 
+      > img {
+        width: auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  article.showcase {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    h3 {
+      flex: 1 0 100%;
+      align-self: center;
+    }
+    figure {
+      margin: 0; 
+      padding: 0; 
+      flex: 0 1 50%;
+      text-align: center;
+      button {
+        all: unset;
+        cursor: pointer;
+        border-radius: 100%;
+        &:hover, 
+        &:active {
+          img {
+            border-color: $m1;
+          }
+        }
+        &:focus {
+          img {
+            border-color: $m2;
+          }
+        }
+        img {
+          margin: 0; 
+          padding: 0;
+          inline-size: 100px;
+          aspect-ratio: 1;
+          object-fit: cover;
+          object-position: top left;
+          border-radius: 100%;
+          border: 5px solid transparent;
+          transition: all 0.25s;
+          @media (min-width: $bp-medium) {
+            inline-size: 200px;
+          }
+          @media (min-width: $bp-large) {
+            inline-size: 300px;
+          }
+          @media (min-huge: $bp-large) {
+            inline-size: 400px;
+          }
+        }
+
+      }
+    }
+  }

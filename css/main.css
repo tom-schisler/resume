@@ -373,7 +373,11 @@ html {
   margin: 0;
   padding: 0;
   background: #fff;
-  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -514,157 +518,6 @@ main {
 section {
   margin: 0;
   padding: 0;
-}
-
-.carousel {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.5rem;
-  grid-auto-flow: column;
-  grid-auto-columns: 90%;
-  overflow-x: auto;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .carousel {
-    scroll-behavior: smooth;
-  }
-}
-.carousel {
-  anchor-name: --carousel;
-  scroll-marker-group: after;
-}
-.carousel::scroll-marker-group {
-  margin: 0 0 2rem 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-}
-.carousel > li {
-  scroll-snap-align: center;
-}
-.carousel > li::scroll-marker {
-  content: "◎";
-  color: hsl(25, 100%, 25%);
-  font-size: 1.2rem;
-  line-height: 1;
-  aspect-ratio: 1/1;
-  text-decoration: none;
-  transition: all 0.25s;
-}
-.carousel > li::scroll-marker:hover {
-  color: hsl(225, 100%, 25%);
-}
-.carousel > li::scroll-marker:target-current {
-  content: "◉";
-  color: hsl(225, 100%, 25%);
-}
-.carousel::scroll-button(*) {
-  position: fixed;
-  position-anchor: --carousel;
-  margin: 0.5rem;
-  font: inherit;
-  background: hsl(225, 100%, 25%);
-  color: #fff;
-  border: 0;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: all 0.25s;
-}
-.carousel::scroll-button(*):hover {
-  background: hsl(25, 100%, 25%);
-}
-.carousel::scroll-button(*):disabled {
-  opacity: 0;
-  background: hsl(225, 100%, 25%);
-  cursor: unset;
-}
-.carousel::scroll-button(right) {
-  content: "→";
-  position-area: center right;
-}
-.carousel::scroll-button(left) {
-  content: "←";
-  position-area: center left;
-}
-
-dialog {
-  margin: 1rem auto;
-  padding: 1rem;
-  border: 2px solid hsl(225, 100%, 25%);
-  border-radius: 0.25rem;
-}
-dialog button {
-  all: unset;
-  border-radius: 0.25rem;
-  margin: 0 0 1rem 0;
-  padding: 0.25rem 0.5rem;
-  background: hsl(225, 100%, 25%);
-  color: #fff;
-  cursor: pointer;
-}
-dialog button:hover, dialog button:active, dialog button:focus {
-  background: hsl(25, 100%, 25%);
-}
-dialog::-ms-backdrop {
-  background-color: hsl(225, 100%, 25%);
-  opacity: 0.75;
-}
-dialog::backdrop {
-  background-color: hsl(225, 100%, 25%);
-  opacity: 0.75;
-}
-dialog figure {
-  margin: 0;
-  padding: 0;
-}
-dialog figure > img {
-  width: auto;
-  max-width: 100%;
-}
-
-article.showcase {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-article.showcase h3 {
-  flex: 1 0 100%;
-  align-self: center;
-}
-article.showcase figure {
-  margin: 0;
-  padding: 0;
-  flex: 0 1 50%;
-  text-align: center;
-}
-article.showcase figure button {
-  all: unset;
-  cursor: pointer;
-  border-radius: 100%;
-}
-article.showcase figure button:hover img, article.showcase figure button:active img, article.showcase figure button:focus img {
-  border-color: hsl(25, 100%, 25%);
-}
-article.showcase figure button img {
-  margin: 0;
-  padding: 0;
-  inline-size: 320px;
-  aspect-ratio: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top left;
-     object-position: top left;
-  border-radius: 100%;
-  border: 5px solid hsl(225, 100%, 25%);
-  transition: all 0.25s;
 }
 
 ::selection {
@@ -842,6 +695,175 @@ button:hover, button:focus,
     width: 100%;
   }
 }
+.carousel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 90%;
+  overflow-x: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  anchor-name: --carousel;
+  scroll-marker-group: after;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .carousel {
+    scroll-behavior: smooth;
+  }
+}
+.carousel::scroll-marker-group {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 0.25rem;
+  padding: 0.5rem 0;
+}
+.carousel > li {
+  scroll-snap-align: center;
+}
+.carousel > li::scroll-marker {
+  content: "◎";
+  color: hsl(25, 100%, 25%);
+  font-size: 1.2rem;
+  line-height: 1;
+  aspect-ratio: 1/1;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.carousel > li::scroll-marker:hover {
+  content: "◉";
+}
+.carousel > li::scroll-marker:target-current {
+  content: "◉";
+  color: hsl(225, 100%, 25%);
+}
+.carousel::scroll-button(*) {
+  position: fixed;
+  position-anchor: --carousel;
+  margin: 0;
+  inset: -1rem;
+  font: inherit;
+  background: hsl(225, 100%, 25%);
+  color: #fff;
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.carousel::scroll-button(*):hover {
+  background: hsl(25, 100%, 25%);
+}
+.carousel::scroll-button(*):disabled {
+  opacity: 0;
+  background: hsl(225, 100%, 25%);
+  cursor: unset;
+}
+.carousel::scroll-button(right) {
+  content: "→";
+  position-area: center right;
+}
+.carousel::scroll-button(left) {
+  content: "←";
+  position-area: center left;
+}
+
+dialog {
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 2px solid hsl(225, 100%, 25%);
+  border-radius: 0.25rem;
+}
+dialog button {
+  all: unset;
+  border-radius: 0.25rem;
+  margin: 0 0 1rem 0;
+  padding: 0.25rem 0.5rem;
+  background: hsl(225, 100%, 25%);
+  color: #fff;
+  cursor: pointer;
+}
+dialog button:hover, dialog button:active {
+  background: hsl(25, 100%, 25%);
+}
+dialog::-ms-backdrop {
+  background-color: hsl(225, 100%, 25%);
+  opacity: 0.75;
+}
+dialog::backdrop {
+  background-color: hsl(225, 100%, 25%);
+  opacity: 0.75;
+}
+dialog figure {
+  margin: 0;
+  padding: 0;
+}
+dialog figure > img {
+  width: auto;
+  max-width: 100%;
+}
+
+article.showcase {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+article.showcase h3 {
+  flex: 1 0 100%;
+  align-self: center;
+}
+article.showcase figure {
+  margin: 0;
+  padding: 0;
+  flex: 0 1 50%;
+  text-align: center;
+}
+article.showcase figure button {
+  all: unset;
+  cursor: pointer;
+  border-radius: 100%;
+}
+article.showcase figure button:hover img, article.showcase figure button:active img {
+  border-color: hsl(25, 100%, 25%);
+}
+article.showcase figure button:focus img {
+  border-color: hsl(225, 100%, 25%);
+}
+article.showcase figure button img {
+  margin: 0;
+  padding: 0;
+  inline-size: 100px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top left;
+     object-position: top left;
+  border-radius: 100%;
+  border: 5px solid transparent;
+  transition: all 0.25s;
+}
+@media (min-width: 600px) {
+  article.showcase figure button img {
+    inline-size: 200px;
+  }
+}
+@media (min-width: 800px) {
+  article.showcase figure button img {
+    inline-size: 300px;
+  }
+}
+@media (min-huge: 800px) {
+  article.showcase figure button img {
+    inline-size: 400px;
+  }
+}
+
 .skip-to-content a {
   margin: 0;
   padding: 0.5rem;
