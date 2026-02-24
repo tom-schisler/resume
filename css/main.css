@@ -541,9 +541,10 @@ section {
   margin: 0 0 2rem 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem 0;
 }
 .carousel > li {
   scroll-snap-align: center;
@@ -551,8 +552,8 @@ section {
 .carousel > li::scroll-marker {
   content: "◎";
   color: hsl(25, 100%, 25%);
-  width: 20px;
-  height: 20px;
+  font-size: 1.2rem;
+  line-height: 1;
   aspect-ratio: 1/1;
   text-decoration: none;
   transition: all 0.25s;
@@ -595,14 +596,14 @@ section {
 
 dialog {
   margin: 1rem auto;
-  padding: 0.5rem;
+  padding: 1rem;
   border: 2px solid hsl(225, 100%, 25%);
   border-radius: 0.25rem;
 }
 dialog button {
   all: unset;
   border-radius: 0.25rem;
-  margin: 0.25rem 0;
+  margin: 0 0 1rem 0;
   padding: 0.25rem 0.5rem;
   background: hsl(225, 100%, 25%);
   color: #fff;
@@ -612,11 +613,11 @@ dialog button:hover, dialog button:active, dialog button:focus {
   background: hsl(25, 100%, 25%);
 }
 dialog::-ms-backdrop {
-  background-color: #000;
+  background-color: hsl(225, 100%, 25%);
   opacity: 0.75;
 }
 dialog::backdrop {
-  background-color: #000;
+  background-color: hsl(225, 100%, 25%);
   opacity: 0.75;
 }
 dialog figure {
@@ -632,9 +633,11 @@ article.showcase {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
+  align-items: center;
 }
 article.showcase h3 {
   flex: 1 0 100%;
+  align-self: center;
 }
 article.showcase figure {
   margin: 0;
@@ -657,10 +660,10 @@ article.showcase figure button img {
   aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top center;
-     object-position: top center;
+  -o-object-position: top left;
+     object-position: top left;
   border-radius: 100%;
-  border: 2px solid hsl(225, 100%, 25%);
+  border: 5px solid hsl(225, 100%, 25%);
   transition: all 0.25s;
 }
 

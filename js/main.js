@@ -4,22 +4,14 @@ jQuery(function($) {
 
   // slider full size image
   $('.carousel button').on('click', function() {
-    // "this" refers to the specific image element that was clicked
+    
+    // get img info 
     var imageUrl = $(this).find('img').attr('src'); 
     var imageAlt = $(this).find('img').attr('alt'); 
-    
-    // Log the URL to the console
-    console.log(imageUrl); 
-    
+  
+    // set dialog
     $('#dialog figure img').attr('src', imageUrl).attr('alt', imageAlt);
 
   });
 
 });
-
-//      <dialog id="dialog">
-//        <button commandfor="dialog" command="close">&times</button>
-//        <figure>
-//          <img src="img/portfolio/adeccousa-living-wage-tool-mobile.png" alt="" />
-//        </figure>
-//      </dialog>
