@@ -521,7 +521,7 @@ section {
 }
 
 ::selection {
-  background-color: rgba(0, 31.875, 127.5, 0.75);
+  background-color: rgba(78.948, 135.235, 140.352, 0.75);
   color: #fff;
 }
 
@@ -606,7 +606,7 @@ ul li {
   padding: 0;
 }
 ul li::marker {
-  color: hsl(225, 100%, 25%);
+  color: hsl(185, 28%, 43%);
 }
 ul li strong {
   font-weight: bolder;
@@ -634,11 +634,11 @@ dl dd {
 }
 
 a {
-  color: hsl(25, 100%, 25%);
+  color: hsl(165, 100%, 7%);
   transition: all 0.25s;
 }
 a:hover, a:focus {
-  color: hsl(225, 100%, 25%);
+  color: hsl(185, 28%, 43%);
 }
 @media print {
   a.screen-only {
@@ -654,7 +654,7 @@ button,
   cursor: pointer;
   padding: 0.5rem 0.75rem;
   color: #fff;
-  background-color: hsl(25, 100%, 25%);
+  background-color: hsl(165, 100%, 7%);
   text-decoration: none;
   border-radius: 0.5rem;
   transition: all 0.25s ease;
@@ -663,7 +663,7 @@ button:hover, button:focus,
 .button:hover,
 .button:focus {
   color: #fff;
-  background-color: hsl(225, 100%, 25%);
+  background-color: hsl(185, 28%, 43%);
   text-decoration: none;
 }
 
@@ -672,7 +672,7 @@ button:hover, button:focus,
   top: 0;
   left: 0;
   height: 10px;
-  background: hsl(225, 100%, 25%);
+  background: hsl(185, 28%, 43%);
   -webkit-animation: grow-progress linear;
           animation: grow-progress linear;
   animation-timeline: scroll();
@@ -728,12 +728,6 @@ button:hover, button:focus,
   margin: 0;
   padding: 0;
   scroll-snap-align: center;
-  text-align: center;
-}
-.carousel > li h3 {
-  margin: 0 auto 0.25rem;
-  display: inline-block;
-  align-self: center;
 }
 .carousel > li header {
   width: 70ch;
@@ -750,7 +744,7 @@ button:hover, button:focus,
 }
 .carousel > li::scroll-marker {
   content: "◎";
-  color: hsl(25, 100%, 25%);
+  color: hsl(165, 100%, 7%);
   font-size: 1.2rem;
   line-height: 1;
   aspect-ratio: 1/1;
@@ -762,7 +756,7 @@ button:hover, button:focus,
 }
 .carousel > li::scroll-marker:target-current {
   content: "◉";
-  color: hsl(225, 100%, 25%);
+  color: hsl(185, 28%, 43%);
 }
 .carousel::scroll-button(*) {
   position: fixed;
@@ -770,7 +764,7 @@ button:hover, button:focus,
   margin: 0;
   inset: -1rem;
   font: inherit;
-  background: hsl(225, 100%, 25%);
+  background: hsl(185, 28%, 43%);
   color: #fff;
   border: 0;
   border-radius: 0.25rem;
@@ -778,11 +772,11 @@ button:hover, button:focus,
   transition: all 0.25s;
 }
 .carousel::scroll-button(*):hover {
-  background: hsl(25, 100%, 25%);
+  background: hsl(165, 100%, 7%);
 }
 .carousel::scroll-button(*):disabled {
   opacity: 0;
-  background: hsl(225, 100%, 25%);
+  background: hsl(185, 28%, 43%);
   cursor: unset;
 }
 .carousel::scroll-button(right) {
@@ -797,7 +791,7 @@ button:hover, button:focus,
 dialog {
   margin: 1rem auto;
   padding: 1rem;
-  border: 2px solid hsl(225, 100%, 25%);
+  border: 2px solid hsl(185, 28%, 43%);
   border-radius: 0.25rem;
 }
 dialog button {
@@ -805,19 +799,19 @@ dialog button {
   border-radius: 0.25rem;
   margin: 0 0 1rem 0;
   padding: 0.25rem 0.5rem;
-  background: hsl(225, 100%, 25%);
+  background: hsl(185, 28%, 43%);
   color: #fff;
   cursor: pointer;
 }
 dialog button:hover, dialog button:active {
-  background: hsl(25, 100%, 25%);
+  background: hsl(165, 100%, 7%);
 }
 dialog::-ms-backdrop {
-  background-color: hsl(225, 100%, 25%);
+  background-color: hsl(185, 28%, 43%);
   opacity: 0.75;
 }
 dialog::backdrop {
-  background-color: hsl(225, 100%, 25%);
+  background-color: hsl(185, 28%, 43%);
   opacity: 0.75;
 }
 dialog figure {
@@ -844,10 +838,10 @@ article.showcase figure button {
   border-radius: 100%;
 }
 article.showcase figure button:hover img, article.showcase figure button:active img {
-  border-color: hsl(25, 100%, 25%);
+  border-color: hsl(165, 100%, 7%);
 }
 article.showcase figure button:focus img {
-  border-color: hsl(225, 100%, 25%);
+  border-color: hsl(185, 28%, 43%);
 }
 article.showcase figure button img {
   margin: 0;
