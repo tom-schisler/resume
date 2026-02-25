@@ -728,6 +728,12 @@ button:hover, button:focus,
   margin: 0;
   padding: 0;
   scroll-snap-align: center;
+  text-align: center;
+}
+.carousel > li h3 {
+  margin: 0 auto 0.25rem;
+  display: inline-block;
+  align-self: center;
 }
 .carousel > li header {
   width: 70ch;
