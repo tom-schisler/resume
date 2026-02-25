@@ -726,6 +726,7 @@ blockquote {
   gap: 0;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
+  align-items: center;
   overflow-x: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
@@ -756,8 +757,8 @@ blockquote {
   content: "";
 }
 .carousel > li header {
-  width: 70ch;
-  margin: 0 auto;
+  max-width: 80ch;
+  margin: 0 auto 0.5rem;
   padding: 0;
   flex-flow: column nowrap;
   box-shadow: none;

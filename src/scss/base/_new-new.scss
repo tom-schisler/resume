@@ -27,6 +27,7 @@
     gap: 0;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
+    align-items: center;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     anchor-name: --carousel;
@@ -55,8 +56,8 @@
       }
 
       header {
-        width: 70ch;
-        margin: 0 auto;
+        max-width: 80ch;
+        margin: 0 auto 0.5rem;
         padding: 0;
         flex-flow: column nowrap;
         box-shadow: none;
