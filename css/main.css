@@ -700,9 +700,9 @@ button:hover, button:focus,
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.5rem;
+  gap: 0;
   grid-auto-flow: column;
-  grid-auto-columns: 90%;
+  grid-auto-columns: 100%;
   overflow-x: hidden;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
@@ -721,11 +721,19 @@ button:hover, button:focus,
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0 0.25rem;
+  gap: 0;
   padding: 0.5rem 0;
 }
 .carousel > li {
+  margin: 0;
+  padding: 0;
   scroll-snap-align: center;
+  text-align: center;
+}
+.carousel > li h3 {
+  margin: 0 auto 0.25rem;
+  display: inline-block;
+  align-self: center;
 }
 .carousel > li::scroll-marker {
   content: "◎";
@@ -809,19 +817,12 @@ dialog figure > img {
 }
 
 article.showcase {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-article.showcase h3 {
-  flex: 1 0 100%;
-  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 50%);
 }
 article.showcase figure {
   margin: 0;
   padding: 0;
-  flex: 0 1 50%;
   text-align: center;
 }
 article.showcase figure button {
