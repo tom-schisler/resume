@@ -24,13 +24,14 @@
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 0.5rem;
+    gap: 0;
     grid-auto-flow: column;
-    grid-auto-columns: 90%;
+    grid-auto-columns: 100%;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     anchor-name: --carousel;
     scroll-marker-group: after;
+
     @media (prefers-reduced-motion: no-preference) {
       scroll-behavior: smooth;
     }
@@ -41,12 +42,21 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 0 0.25rem;
+      gap: 0;
       padding: 0.5rem 0;
     }
 
     > li {
+      margin: 0; 
+      padding: 0; 
       scroll-snap-align: center;
+      text-align: center;
+
+      h3 {
+        margin: 0 auto 0.25rem;
+        display: inline-block;
+        align-self: center;
+      }
 
       &::scroll-marker {
         content: "\25CE";
@@ -133,18 +143,16 @@
   }
 
   article.showcase {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    align-items: center;
-    h3 {
-      flex: 1 0 100%;
-      align-self: center;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+    // flex-flow: row;
+    // flex-wrap: wrap;
+    // align-items: center;
+
     figure {
       margin: 0; 
       padding: 0; 
-      flex: 0 1 50%;
+      // flex: 0 1 50%;
       text-align: center;
       button {
         all: unset;
