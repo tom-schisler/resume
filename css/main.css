@@ -735,6 +735,19 @@ button:hover, button:focus,
   display: inline-block;
   align-self: center;
 }
+.carousel > li header {
+  width: 70ch;
+  margin: 0 auto;
+  padding: 0;
+  flex-flow: column nowrap;
+  box-shadow: none;
+}
+.carousel > li header h3 {
+  margin: 0 auto;
+}
+.carousel > li header p {
+  margin: 0.25rem auto;
+}
 .carousel > li::scroll-marker {
   content: "◎";
   color: hsl(25, 100%, 25%);
@@ -840,7 +853,7 @@ article.showcase figure button img {
   margin: 0;
   padding: 0;
   inline-size: 100px;
-  aspect-ratio: 1;
+  aspect-ratio: 3/4;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top left;
