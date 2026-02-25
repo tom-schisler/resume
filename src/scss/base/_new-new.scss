@@ -50,13 +50,21 @@
       margin: 0; 
       padding: 0; 
       scroll-snap-align: center;
-      text-align: center;
 
-      h3 {
-        margin: 0 auto 0.25rem;
-        display: inline-block;
-        align-self: center;
+      header {
+        width: 70ch;
+        margin: 0 auto;
+        padding: 0;
+        flex-flow: column nowrap;
+        box-shadow: none;
+        h3 {
+          margin: 0 auto;
+        }
+        p { 
+          margin: 0.25rem auto;
+        }
       }
+
 
       &::scroll-marker {
         content: "\25CE";
@@ -145,14 +153,10 @@
   article.showcase {
     display: grid;
     grid-template-columns: repeat(auto-fit, 50%);
-    // flex-flow: row;
-    // flex-wrap: wrap;
-    // align-items: center;
 
     figure {
       margin: 0; 
       padding: 0; 
-      // flex: 0 1 50%;
       text-align: center;
       button {
         all: unset;
@@ -173,10 +177,10 @@
           margin: 0; 
           padding: 0;
           inline-size: 100px;
-          aspect-ratio: 1;
+          aspect-ratio: 3/4;
           object-fit: cover;
           object-position: top left;
-          border-radius: 100%;
+          border-radius: 1rem;
           border: 5px solid transparent;
           transition: all 0.25s;
           @media (min-width: $bp-medium) {

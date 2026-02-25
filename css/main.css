@@ -728,12 +728,19 @@ button:hover, button:focus,
   margin: 0;
   padding: 0;
   scroll-snap-align: center;
-  text-align: center;
 }
-.carousel > li h3 {
-  margin: 0 auto 0.25rem;
-  display: inline-block;
-  align-self: center;
+.carousel > li header {
+  width: 70ch;
+  margin: 0 auto;
+  padding: 0;
+  flex-flow: column nowrap;
+  box-shadow: none;
+}
+.carousel > li header h3 {
+  margin: 0 auto;
+}
+.carousel > li header p {
+  margin: 0.25rem auto;
 }
 .carousel > li::scroll-marker {
   content: "◎";
@@ -840,12 +847,12 @@ article.showcase figure button img {
   margin: 0;
   padding: 0;
   inline-size: 100px;
-  aspect-ratio: 1;
+  aspect-ratio: 3/4;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top left;
      object-position: top left;
-  border-radius: 100%;
+  border-radius: 1rem;
   border: 5px solid transparent;
   transition: all 0.25s;
 }
