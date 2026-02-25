@@ -523,6 +523,15 @@ section {
   padding: 0;
 }
 
+aside {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+aside > p {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
 ::selection {
   background-color: rgba(217.1325, 63.3675, 101.80875, 0.75);
   color: #fff;

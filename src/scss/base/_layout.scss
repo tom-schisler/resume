@@ -144,4 +144,10 @@ main {
     padding: 0;
   }
 
-  
+  aside {
+    margin: 0.5rem 0;
+    padding: 0; 
+    > p {
+      margin-block-end: 0;
+    }
+  }
