@@ -845,7 +845,7 @@ article.showcase figure button img {
      object-fit: cover;
   -o-object-position: top left;
      object-position: top left;
-  border-radius: 100%;
+  border-radius: 1rem;
   border: 5px solid transparent;
   transition: all 0.25s;
 }
