@@ -757,7 +757,7 @@ blockquote {
   content: "";
 }
 .carousel > li header {
-  max-width: 80ch;
+  max-width: 85ch;
   margin: 0 auto 0.5rem;
   padding: 0;
   flex-flow: column nowrap;
@@ -834,11 +834,11 @@ dialog button:hover, dialog button:active {
   background: hsl(211, 87%, 25%);
 }
 dialog::-ms-backdrop {
-  background-color: hsl(345, 67%, 55%);
+  background-color: hsl(211, 87%, 25%);
   opacity: 0.75;
 }
 dialog::backdrop {
-  background-color: hsl(345, 67%, 55%);
+  background-color: hsl(211, 87%, 25%);
   opacity: 0.75;
 }
 dialog figure {
