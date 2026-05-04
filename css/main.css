@@ -541,6 +541,7 @@ h6, h5, h4, h3, h2, h1 {
   margin: 0;
   padding: 0;
   font-family: "Source Sans 3", sans-serif;
+  color: hsl(211, 87%, 25%);
 }
 h6 > strong, h5 > strong, h4 > strong, h3 > strong, h2 > strong, h1 > strong {
   font-weight: bolder;
